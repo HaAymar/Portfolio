@@ -3,7 +3,7 @@ import { Container } from "react-bootstrap";
 import Techstack from "./Techstack";
 import Toolstack from "./Toolstack";
 
-function About() {
+function Skills() {
 	return (
 		<Container fluid className="about-section">
 			<Container>
@@ -22,4 +22,4 @@ function About() {
 	);
 }
 
-export default About;
+export default Skills;

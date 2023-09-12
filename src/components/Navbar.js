@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Navbar from "react-bootstrap/Navbar";
-import About from "./Home/Home2";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 import logo from "../Assets/blue.png";
@@ -72,7 +71,7 @@ function NavBar() {
 								to="/about"
 								onClick={() => updateExpanded(false)}
 							>
-								About
+							 About
 							</Nav.Link>
 						</Nav.Item>
 
@@ -89,13 +88,12 @@ function NavBar() {
 						<Nav.Item>
 							<Nav.Link
 								as={Link}
-								to="/about"
+								to="/skills"
 								onClick={() => updateExpanded(false)}
 							>
 								Skills
 							</Nav.Link>
 						</Nav.Item>
-
 						<Nav.Item>
 							<Nav.Link
 								as={Link}
@@ -107,11 +105,11 @@ function NavBar() {
 						</Nav.Item>
 						<Nav.Item>
 							<Nav.Link
-								href="https://soumyajitblogs.vercel.app/"
-								target="_blank"
-								rel="noreferrer"
+								as={Link}
+								to="/contact"
+								onClick={() => updateExpanded(false)}
 							>
-								contact
+								Contact
 							</Nav.Link>
 						</Nav.Item>
 					</Nav>
