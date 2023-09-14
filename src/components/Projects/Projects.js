@@ -4,7 +4,7 @@ import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
 import leaf from "../../Assets/Projects/carRental.svg";
 import emotion from "../../Assets/Projects/Translator.png";
-import editor from "../../Assets/Projects/codeEditor.png";
+// import editor from "../../Assets/Projects/codeEditor.png";
 
 import suicide from "../../Assets/Projects/TaalToolBox.svg";
 

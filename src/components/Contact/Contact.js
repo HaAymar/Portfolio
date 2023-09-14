@@ -24,21 +24,9 @@ const Carousel = () => {
 	return (
 		<div>
 			<h1>Carrousel de photos</h1>
-			{!carouselActive ? (
-				<button onClick={activateCarousel}>Activer le carrousel</button>
-			) : (
-				<Slider {...settings}>
-					<div>
-						<img src={Access} alt="Image 1" />
-					</div>
-					<div>
-						<img src={Phosforea} alt="Image 2" />
-					</div>
-					<div>
-						<img src={Devday} alt="Image 3" />
-					</div>
-				</Slider>
-			)}
+		 
+				<button onClick={activateCarousel}>Very soon</button>
+			 
 		</div>
 	);
 };
