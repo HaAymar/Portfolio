@@ -3,20 +3,8 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 import logo from "../Assets/blue.png";
-import Button from "react-bootstrap/Button";
-import { Link } from "react-router-dom";
-import { CgGitFork } from "react-icons/cg";
-import { ImBlog } from "react-icons/im";
-import {
-	AiFillStar,
-	AiOutlineHome,
-	AiOutlineFundProjectionScreen,
-	AiOutlineUser,
-	AiTwotoneExperiment,
-	AiFillContacts,
-} from "react-icons/ai";
 
-import { CgFileDocument } from "react-icons/cg";
+import { Link } from "react-router-dom";
 
 function NavBar() {
 	const [expand, updateExpanded] = useState(false);
@@ -64,17 +52,6 @@ function NavBar() {
 								Home
 							</Nav.Link>
 						</Nav.Item>
-
-						<Nav.Item>
-							<Nav.Link
-								as={Link}
-								to="/about"
-								onClick={() => updateExpanded(false)}
-							>
-							 About
-							</Nav.Link>
-						</Nav.Item>
-
 						<Nav.Item>
 							<Nav.Link
 								as={Link}
