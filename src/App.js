@@ -10,10 +10,10 @@ import Resume from "./components/Resume/ResumeNew";
 import Experience from "./components/Experience/Experience";
 import Contact from "./components/Contact/Contact";
 import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-  Navigate
+	BrowserRouter as Router,
+	Route,
+	Routes,
+	Navigate,
 } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import "./style.css";
@@ -21,35 +21,39 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
-  const [load, upadateLoad] = useState(true);
+	const [load, upadateLoad] = useState(true);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      upadateLoad(false);
-    }, 1200);
+	useEffect(() => {
+		const timer = setTimeout(() => {
+			upadateLoad(false);
+		}, 1200);
 
-    return () => clearTimeout(timer);
-  }, []);
+		return () => clearTimeout(timer);
+	}, []);
 
-  return (
-    <Router>
-      <Preloader load={load} />
-      <div className="App" id={load ? "no-scroll" : "scroll"}>
-        <Navbar />
-        <ScrollToTop />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/project" element={<Projects />} />
-          <Route path="/about" element={<AboutMe />} />
-          <Route path="/skills" element={<Skills />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="*" element={<Navigate to="/"/>} />
-          <Route path="/Experience" element={<Experience />} />
-        </Routes>
-        <Footer />
-      </div>
-    </Router>
-  );
+	return (
+		<Router>
+			<Preloader load={load} />
+			<div
+				className="App"
+				id={load ? "no-scroll" : "scroll"}
+				style={{ maxHeight: "100%" }}
+			>
+				<Navbar />
+				<ScrollToTop />
+				<Routes>
+					<Route path="/" element={<Home />} />
+					<Route path="/project" element={<Projects />} />
+					<Route path="/about" element={<AboutMe />} />
+					<Route path="/skills" element={<Skills />} />
+					<Route path="/contact" element={<Contact />} />
+					<Route path="*" element={<Navigate to="/" />} />
+					<Route path="/Experience" element={<Experience />} />
+				</Routes>
+				<Footer />
+			</div>
+		</Router>
+	);
 }
 
 export default App;

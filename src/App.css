@@ -28,6 +28,25 @@
 	color: #61dafb;
 }
 
+/* styles.css */
+.contact-info {
+	color: white;
+	font-size: 18px;
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+}
+
+.contact-info-icon {
+	font-size: 25px;
+	margin-right: 10px;
+}
+
+/* Optionnel : Pour ajouter de l'espace entre les icônes et le texte */
+.contact-info-text {
+	margin-left: 5px;
+}
+
 @keyframes App-logo-spin {
 	from {
 		transform: rotate(0deg);
