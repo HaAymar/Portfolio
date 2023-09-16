@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Col, Row } from "react-bootstrap";
 
 import {
@@ -9,110 +9,60 @@ import {
 	DiGit,
 } from "react-icons/di";
 import { FaVuejs } from "react-icons/fa";
-import {
-	SiTypescript,
-	SiPostgresql,
-	SiNestjs,
-	SiLinux,
-	SiDocker,
-	SiMysql,
-} from "react-icons/si";
-import { TbBrandGolang } from "react-icons/tb";
+import { SiTypescript, SiPostgresql, SiNestjs, SiMysql } from "react-icons/si";
 import ProgressBar from "@ramonak/react-progress-bar";
 
 function Techstack() {
+	const [hoveredIcon, setHoveredIcon] = useState("");
+
+	const handleIconMouseEnter = (iconName) => {
+		setHoveredIcon(iconName);
+	};
+
+	const handleIconMouseLeave = () => {
+		setHoveredIcon("");
+	};
+
+	const techIcons = [
+		{ name: "JavaScript", icon: <DiJavascript1 /> },
+		{ name: "Node.js", icon: <DiNodejs /> },
+		{ name: "React", icon: <DiReact /> },
+		{ name: "Git", icon: <DiGit /> },
+		{ name: "PostgreSQL", icon: <SiPostgresql /> },
+		{ name: "Python", icon: <DiPython /> },
+		{ name: "TypeScript", icon: <SiTypescript /> },
+		{ name: "Nest.js", icon: <SiNestjs /> },
+		{ name: "MySQL", icon: <SiMysql /> },
+		{ name: "Vue.js", icon: <FaVuejs /> },
+	];
+
 	return (
 		<Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
-			<Col xs={4} md={2} className="tech-icons">
-				<DiJavascript1 />
-				<ProgressBar
-					completed={75}
-					bgColor="#5D76DF"
-					animateOnRender={true}
-					isLabelVisible={false}
-				/>
-			</Col>
-			<Col xs={4} md={2} className="tech-icons">
-				<DiNodejs />
-				<ProgressBar
-					completed={75}
-					bgColor="#5D76DF"
-					animateOnRender={true}
-					isLabelVisible={false}
-				/>
-			</Col>
-			<Col xs={4} md={2} className="tech-icons">
-				<DiReact />
-				<ProgressBar
-					completed={75}
-					bgColor="#5D76DF"
-					animateOnRender={true}
-					isLabelVisible={false}
-				/>
-			</Col>
-			<Col xs={4} md={2} className="tech-icons">
-				<DiGit />
-				<ProgressBar
-					completed={75}
-					bgColor="#5D76DF"
-					animateOnRender={true}
-					isLabelVisible={false}
-				/>
-			</Col>
-			<Col xs={4} md={2} className="tech-icons">
-				<SiPostgresql />
-				<ProgressBar
-					completed={75}
-					bgColor="#5D76DF"
-					animateOnRender={true}
-					isLabelVisible={false}
-				/>
-			</Col>
-			<Col xs={4} md={2} className="tech-icons">
-				<DiPython />
-				<ProgressBar
-					completed={50}
-					bgColor="#5D76DF"
-					animateOnRender={true}
-					isLabelVisible={false}
-				/>
-			</Col>
-			<Col xs={4} md={2} className="tech-icons">
-				<SiTypescript />
-				<ProgressBar
-					completed={75}
-					bgColor="#5D76DF"
-					animateOnRender={true}
-					isLabelVisible={false}
-				/>
-			</Col>
-			<Col xs={4} md={2} className="tech-icons">
-				<SiNestjs />
-				<ProgressBar
-					completed={75}
-					bgColor="#5D76DF"
-					animateOnRender={true}
-					isLabelVisible={false}
-				/>
-			</Col>
-			<Col xs={4} md={2} className="tech-icons">
-				<SiMysql />
-				<ProgressBar
-					completed={75}
-					bgColor="#5D76DF"
-					animateOnRender={true}
-					isLabelVisible={false}
-				/>
-			</Col>
-			<Col xs={4} md={2} className="tech-icons">
-				<FaVuejs />
-				<ProgressBar
-					completed={50}
-					bgColor="#5D76DF"
-					animateOnRender={true}
-					isLabelVisible={false}
-				/>
-			</Col>
+			{techIcons.map((tech, index) => (
+				<Col
+					key={index}
+					xs={4}
+					md={2}
+					className="tech-icons"
+					onMouseEnter={() => handleIconMouseEnter(tech.name)}
+					onMouseLeave={handleIconMouseLeave}
+				>
+					<div className="icon-wrapper">
+						{tech.icon}
+						<ProgressBar
+							completed={75} // You can customize this as needed
+							bgColor="#5D76DF"
+							animateOnRender={true}
+							isLabelVisible={false}
+						/>
+					</div>
+					{hoveredIcon === tech.name && (
+						<div className="icon-name" style={{ fontSize: "15px" }}>
+							{tech.name}
+						</div>
+					)}
+				</Col>
+			))}
 		</Row>
 	);
 }

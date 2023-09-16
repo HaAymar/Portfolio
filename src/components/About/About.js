@@ -5,7 +5,7 @@ import Toolstack from "./Toolstack";
 
 function Skills() {
 	return (
-		<Container fluid className="about-section">
+		<Container style={{ padding: "80px", color: "white" }}>
 			<Container>
 				<h1 className="project-heading">
 					<strong className="purple">My Skills </strong>

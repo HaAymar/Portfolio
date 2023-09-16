@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { Col, Row } from "react-bootstrap";
 import {
 	SiVisualstudiocode,
 	SiPostman,
-  SiLinux,
+	SiLinux,
 	SiDocker,
 	SiFigma,
 	SiAdobexd,
@@ -12,71 +12,53 @@ import {
 import ProgressBar from "@ramonak/react-progress-bar";
 
 function Toolstack() {
+	const [hoveredIcon, setHoveredIcon] = useState("");
+
+	const handleIconMouseEnter = (iconName) => {
+		setHoveredIcon(iconName);
+	};
+
+	const handleIconMouseLeave = () => {
+		setHoveredIcon("");
+	};
+
+	const techIcons = [
+		{ name: "VS code", icon: <SiVisualstudiocode /> },
+		{ name: "Postman", icon: <SiPostman /> },
+		{ name: "Linux", icon: <SiLinux /> },
+		{ name: "Docker", icon: <SiDocker /> },
+		{ name: "Figma", icon: <SiFigma /> },
+		{ name: "AdobeXd", icon: <SiAdobexd /> },
+		{ name: "Jenkins", icon: <SiJenkins /> },
+	];
+
 	return (
 		<Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
-			<Col xs={4} md={2} className="tech-icons">
-				<SiVisualstudiocode />
-				<ProgressBar
-					completed={100}
-					bgColor="#5D76DF"
-					animateOnRender={true}
-					isLabelVisible={false}
-				/>
-			</Col>
-			<Col xs={4} md={2} className="tech-icons">
-				<SiPostman />
-				<ProgressBar
-					completed={60}
-					bgColor="#5D76DF"
-					animateOnRender={true}
-					isLabelVisible={false}
-				/>
-			</Col>
-			<Col xs={4} md={2} className="tech-icons">
-				<SiLinux />
-				<ProgressBar
-					completed={80}
-					bgColor="#5D76DF"
-					animateOnRender={true}
-					isLabelVisible={false}
-				/>
-			</Col>
-			<Col xs={4} md={2} className="tech-icons">
-				<SiDocker />
-				<ProgressBar
-					completed={60}
-					bgColor="#5D76DF"
-					animateOnRender={true}
-					isLabelVisible={false}
-				/>
-			</Col>
-			<Col xs={4} md={2} className="tech-icons">
-				<SiFigma />
-				<ProgressBar
-					completed={60}
-					bgColor="#5D76DF"
-					animateOnRender={true}
-					isLabelVisible={false}
-				/>
-			</Col>
-			<Col xs={4} md={2} className="tech-icons">
-				<SiAdobexd />
-				<ProgressBar
-					completed={60}
-					bgColor="#5D76DF"
-					animateOnRender={true}
-					isLabelVisible={false}
-				/>
-			</Col>
-			<Col xs={4} md={2} className="tech-icons">
-				<SiJenkins />
-				<ProgressBar
-					completed={40}
-					bgColor="#5D76DF"
-					animateOnRender={true}
-					isLabelVisible={false}
-				/>
-			</Col>
+			{techIcons.map((tech, index) => (
+				<Col
+					key={index}
+					xs={4}
+					md={2}
+					className="tech-icons"
+					onMouseEnter={() => handleIconMouseEnter(tech.name)}
+					onMouseLeave={handleIconMouseLeave}
+				>
+					<div className="icon-wrapper">
+						{tech.icon}
+						<ProgressBar
+							completed={75} // You can customize this as needed
+							bgColor="#5D76DF"
+							animateOnRender={true}
+							isLabelVisible={false}
+						/>
+					</div>
+					{hoveredIcon === tech.name && (
+						<div className="icon-name" style={{ fontSize: "15px" }}>
+							{tech.name}
+						</div>
+					)}
+				</Col>
+			))}
 		</Row>
 	);
 }
