@@ -1,17 +1,14 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import styled from "styled-components";
 import { Container } from "react-bootstrap";
 import { MdOutlineAlternateEmail } from "react-icons/md";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { BiCurrentLocation } from "react-icons/bi";
-import { AiFillGithub, AiFillInstagram } from "react-icons/ai";
-import { MdEmail } from "react-icons/md";
-import { FaLinkedinIn } from "react-icons/fa";
 
 const Contact = () => {
 	const form = useRef();
-
+	const [isEmailSent, setIsEmailSent] = useState(false);
 	const sendEmail = (e) => {
 		e.preventDefault();
 
@@ -20,11 +17,12 @@ const Contact = () => {
 				"service_n454248",
 				"template_269bk9o",
 				form.current,
-				"YOUR_PUBLIC_KEY"
+				"M_7DpamNSAaW_z5Po"
 			)
 			.then(
 				(result) => {
 					console.log(result.text);
+					setIsEmailSent(true);
 				},
 				(error) => {
 					console.log(error.text);
@@ -42,35 +40,21 @@ const Contact = () => {
 					Send me an email for any question
 				</p>
 				<StyledContactForm>
-					<form ref={form} onSubmit={sendEmail}>
-						<label style={{ color: "white" }}>Name</label>
-						<input type="text" name="user_name" />
-						<label style={{ color: "white" }}>Email</label>
-						<input type="email" name="user_email" />
-						<label style={{ color: "white" }}>Message</label>
-						<textarea name="message" />
-						<input type="submit" value="Send" />
-					</form>
-					{/* <div>
-						<div className="contact-info">
-							<MdOutlineAlternateEmail className="contact-info-icon" />
-							<div className="contact-info-text">
-								aymar.hakizimana@gmail.com
-							</div>
+					{isEmailSent ? (
+						<div style={{ color: "green" }}>
+							Email sent successfully!
 						</div>
-						<div className="contact-info">
-							<BsFillTelephoneFill className="contact-info-icon" />
-							<div className="contact-info-text">
-								+32 487 609 782
-							</div>
-						</div>
-						<div className="contact-info">
-							<BiCurrentLocation className="contact-info-icon" />
-							<div className="contact-info-text">
-								Belgium, Namur
-							</div>
-						</div>
-					</div> */}
+					) : (
+						<form ref={form} onSubmit={sendEmail}>
+							<label style={{ color: "white" }}>Name</label>
+							<input type="text" name="user_name" />
+							<label style={{ color: "white" }}>Email</label>
+							<input type="email" name="user_email" />
+							<label style={{ color: "white" }}>Message</label>
+							<textarea name="message" />
+							<input type="submit" value="Send" />
+						</form>
+					)}
 					<ul
 						style={{
 							display: "flex",
