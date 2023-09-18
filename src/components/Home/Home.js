@@ -1,11 +1,12 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import homeLogo from "../../Assets/logo-home.svg";
-import Particle from "../Particle";
+import { Link } from "react-router-dom";
 import Home2 from "./Home2";
-import Type from "./Type";
+import Particles from "../Particle";
 import Button from "react-bootstrap/Button";
 import ProgressBar from "@ramonak/react-progress-bar";
+
 function Home() {
 	const downloadCv = (url) => {
 		const aTag = document.createElement("a");
@@ -15,15 +16,18 @@ function Home() {
 		aTag.click();
 		aTag.remove();
 	};
+
 	return (
 		<section>
-			<Container fluid className="home-section" id="home">
+			<Container>
 				<Container className="home-content">
 					<Row>
+						{/* Conditionally render Particles only in the Home component */}
+						<Particles />
 						<Col md={7} className="home-header">
 							<h1
 								style={{ paddingBottom: 15 }}
-								className="heading"
+								className="heading-name"
 							>
 								Hello!{" "}
 								<span
@@ -35,21 +39,32 @@ function Home() {
 								</span>
 							</h1>
 
-							<h1 className="heading-name">
+							<h2 className="heading-name-des">
 								I'm
 								<strong className="main-name">
 									{" "}
 									Aymar HAKIZIMANA{" "}
 								</strong>
-							</h1>
+								a Full Stack developer passionate about web and
+								application development
+							</h2>
 
-							<div style={{ padding: 50, textAlign: "left" }}>
-								<Type />
-								{/* <ProgressBar completed = {50} bgColor = "grey" animateOnRender = {true} /> */}
+							<div style={{ padding: 40, textAlign: "left" }}>
+								<Link to="contact">
+									<Button
+										style={{
+											width: "180px",
+											height: "50px",
+										}}
+									>
+										Contact Me
+									</Button>
+								</Link>
 							</div>
 
-							<div style={{ padding: 50, textAlign: "left" }}>
-							</div>
+							<div
+								style={{ padding: 50, textAlign: "left" }}
+							></div>
 						</Col>
 
 						<Col md={5} style={{ paddingBottom: 20 }}>
@@ -63,7 +78,6 @@ function Home() {
 					</Row>
 				</Container>
 			</Container>
-			<Home2 />
 		</section>
 	);
 }

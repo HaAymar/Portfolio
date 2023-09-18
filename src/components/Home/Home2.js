@@ -37,7 +37,7 @@ function Home2() {
 				<Row>
 					<Col md={12} className="home-about-social">
 						<Button href={Resume} target="_blank" rel="noreferrer">
-							My resume (CV)
+							Download My CV
 						</Button>
 					</Col>
 				</Row>
