@@ -2,7 +2,6 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import homeLogo from "../../Assets/logo-home.svg";
 import { Link } from "react-router-dom";
-import Particles from "../Particle";
 import Button from "react-bootstrap/Button";
 import {
 	AiFillGithub,
@@ -118,7 +117,6 @@ function Home() {
 							/>
 						</Col>
 					</Row>
-					<Particles />
 				</Container>
 			</Container>
 		</section>
