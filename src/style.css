@@ -436,7 +436,7 @@ button:focus {
 	}
 
 	.footer-body {
-		text-align: center !important;
+		text-align: center;
 	}
 }
 
@@ -447,9 +447,10 @@ button:focus {
 	margin-bottom: 0.5em !important;
 }
 .footer-icons {
-	margin-top: 0.5em !important;
+	margin-top: 1em !important;
 	margin-bottom: 0.5em !important;
-	padding: 0 !important;
+	padding-right: 1px !important;
+	font-size: 1.1em;
 }
 
 .blockquote-footer {

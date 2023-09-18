@@ -2,28 +2,23 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import homeLogo from "../../Assets/logo-home.svg";
 import { Link } from "react-router-dom";
-import Home2 from "./Home2";
 import Particles from "../Particle";
 import Button from "react-bootstrap/Button";
-import ProgressBar from "@ramonak/react-progress-bar";
+import {
+	AiFillGithub,
+	AiOutlineTwitter,
+	AiFillInstagram,
+} from "react-icons/ai";
+import { FaLinkedinIn } from "react-icons/fa";
 
 function Home() {
-	const downloadCv = (url) => {
-		const aTag = document.createElement("a");
-		aTag.href = url;
-		aTag.setAttribute("download", "Resume");
-		document.body.appendChild(aTag);
-		aTag.click();
-		aTag.remove();
-	};
-
 	return (
 		<section>
 			<Container>
 				<Container className="home-content">
 					<Row>
 						{/* Conditionally render Particles only in the Home component */}
-						<Particles />
+
 						<Col md={7} className="home-header">
 							<h1
 								style={{ paddingBottom: 15 }}
@@ -48,9 +43,57 @@ function Home() {
 								a Full Stack developer passionate about web and
 								application development
 							</h2>
+							<Row>
+								<Col md="4" className="footer-body">
+									<ul className="footer-icons">
+										<li className="social-icons">
+											<a
+												href="https://github.com/HaAymar"
+												style={{ color: "white" }}
+												target="_blank"
+												rel="noopener noreferrer"
+											>
+												<AiFillGithub />
+											</a>
+										</li>
+										<li className="social-icons">
+											<a
+												href="https://twitter.com/HakiAymar16444"
+												style={{ color: "white" }}
+												target="_blank"
+												rel="noopener noreferrer"
+											>
+												<AiOutlineTwitter />
+											</a>
+										</li>
+										<li className="social-icons">
+											<a
+												href="https://www.linkedin.com/in/aymar-davy/"
+												style={{ color: "white" }}
+												target="_blank"
+												rel="noopener noreferrer"
+											>
+												<FaLinkedinIn />
+											</a>
+										</li>
+										<li className="social-icons">
+											<a
+												href="https://www.instagram.com/aymardavy02/"
+												style={{ color: "white" }}
+												target="_blank"
+												rel="noopener noreferrer"
+											>
+												<AiFillInstagram />
+											</a>
+										</li>
+									</ul>
+								</Col>
+							</Row>
 
 							<div style={{ padding: 40, textAlign: "left" }}>
-								<Link to="contact">
+								<Link to="/contact">
+									{" "}
+									{/* Update the "to" prop with the correct route */}
 									<Button
 										style={{
 											width: "180px",
@@ -61,7 +104,6 @@ function Home() {
 									</Button>
 								</Link>
 							</div>
-
 							<div
 								style={{ padding: 50, textAlign: "left" }}
 							></div>
@@ -76,6 +118,7 @@ function Home() {
 							/>
 						</Col>
 					</Row>
+					<Particles />
 				</Container>
 			</Container>
 		</section>
