@@ -37,7 +37,7 @@ function Home() {
 								I'm
 								<strong className="main-name">
 									{" "}
-									Aymar HAKIZIMANA{" "}
+									Aymar Davy HAKIZIMANA{" "}
 								</strong>
 								a Full Stack developer passionate about web and
 								application development
