@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Container } from "react-bootstrap";
 import Access from "../../Assets/access2U.png";
-import Phosforea from "../../Assets/phos.png";
+import Phosforea from "../../Assets/phospho.png";
 import Devday from "../../Assets/devda.png";
 import Odoo from "../../Assets/odoo.png";
 import Ucl from "../../Assets/ucl.png";
@@ -47,10 +47,9 @@ import W2 from "../../Assets/OpenWeek/p2.jpg";
 import Ctf from "../../Assets/certificat.pdf";
 
 function Experience() {
-
- const [devDayActive, setdevDayActive] = useState(false);
- const [odooActive, setodooActive] = useState(false);
- const [openWeekActive, setopenWeekActive] = useState(false);
+	const [devDayActive, setdevDayActive] = useState(false);
+	const [odooActive, setodooActive] = useState(false);
+	const [openWeekActive, setopenWeekActive] = useState(false);
 
 	const settings = {
 		dots: true,
@@ -61,15 +60,15 @@ function Experience() {
 		autoplay: true,
 		autoplaySpeed: 3000,
 	};
-//----------- DevDay Action --------- //
- 	const devDayCarousel = () => {
+	//----------- DevDay Action --------- //
+	const devDayCarousel = () => {
 		setdevDayActive(true);
 	};
 
 	const devDayClose = () => {
 		setdevDayActive(false);
 	};
-//------------ Odoo Action ---------//
+	//------------ Odoo Action ---------//
 	const odooCarousel = () => {
 		setodooActive(true);
 	};
@@ -77,7 +76,7 @@ function Experience() {
 	const odooClose = () => {
 		setodooActive(false);
 	};
-//------------- Open Week ---------//
+	//------------- Open Week ---------//
 	const openWeekCarousel = () => {
 		setopenWeekActive(true);
 	};
@@ -108,9 +107,9 @@ function Experience() {
 				>
 					<img src={Access} alt="Access2u" />
 					<div style={{ color: "black" }}>
-						<h3 className="vertical-timeline-element-title">
+						<h6 className="vertical-timeline-element-title">
 							Access2University
-						</h3>
+						</h6>
 						<h4 className="vertical-timeline-element-subtitle">
 							UCL
 						</h4>
@@ -137,7 +136,7 @@ function Experience() {
 					<img
 						src={Phosforea}
 						alt="Phosforea"
-						style={{ maxWidth: "200px" }}
+						style={{ maxWidth: "160px" }}
 					/>
 					<div style={{ color: "black" }}>
 						<h3 className="vertical-timeline-element-title">
@@ -189,33 +188,40 @@ function Experience() {
 						<Button onClick={devDayCarousel}>Photos</Button>
 					) : (
 						<>
-						<Button onClick={devDayClose} style={{ margin:"15px"}}>Close</Button>
-						<Slider {...settings} style={{ color: "black" }}>
-							<div>
-								<img
-									src={P1}
-									alt="monImage"
-									style={{ width: "400px" ,maxHeight : "400px"}}
-								/>
-							</div>
-							<div>
-								<img
-									src={P2}
-									alt="monImage"
-									style={{ width: "400px" }}
-								/>
-							</div>
-							<div>
-								<img
-									src={P3}
-									alt="monImage"
-									style={{ width: "400px" }}
-								/>
-							</div>
-						</Slider>
+							<Button
+								onClick={devDayClose}
+								style={{ margin: "15px" }}
+							>
+								Close
+							</Button>
+							<Slider {...settings} style={{ color: "black" }}>
+								<div>
+									<img
+										src={P1}
+										alt="monImage"
+										style={{
+											width: "400px",
+											maxHeight: "400px",
+										}}
+									/>
+								</div>
+								<div>
+									<img
+										src={P2}
+										alt="monImage"
+										style={{ width: "400px" }}
+									/>
+								</div>
+								<div>
+									<img
+										src={P3}
+										alt="monImage"
+										style={{ width: "400px" }}
+									/>
+								</div>
+							</Slider>
 						</>
 					)}
-					 
 				</VerticalTimelineElement>
 				<VerticalTimelineElement
 					style={{ color: "white" }}
@@ -246,30 +252,38 @@ function Experience() {
 						<Button onClick={odooCarousel}>Photos</Button>
 					) : (
 						<>
-						<Button onClick={odooClose} style={{ margin:"15px"}}>Close</Button>
-						<Slider {...settings} style={{ color: "black" }}>
-							<div>
-								<img
-									src={O1}
-									alt="monImage"
-									style={{ width: "400px" }}
-								/>
-							</div>
-							<div>
-								<img
-									src={O2}
-									alt="monImage"
-									style={{ width: "400px" }}
-								/>
-							</div>
-							<div>
-								<img
-									src={O3}
-									alt="monImage"
-									style={{ width: "350px", maxHeight : "400px"}}
-								/>
-							</div>
-						</Slider>
+							<Button
+								onClick={odooClose}
+								style={{ margin: "15px" }}
+							>
+								Close
+							</Button>
+							<Slider {...settings} style={{ color: "black" }}>
+								<div>
+									<img
+										src={O1}
+										alt="monImage"
+										style={{ width: "400px" }}
+									/>
+								</div>
+								<div>
+									<img
+										src={O2}
+										alt="monImage"
+										style={{ width: "400px" }}
+									/>
+								</div>
+								<div>
+									<img
+										src={O3}
+										alt="monImage"
+										style={{
+											width: "350px",
+											maxHeight: "400px",
+										}}
+									/>
+								</div>
+							</Slider>
 						</>
 					)}
 				</VerticalTimelineElement>
@@ -301,24 +315,31 @@ function Experience() {
 						<Button onClick={openWeekCarousel}>Photos</Button>
 					) : (
 						<>
-						<Button onClick={openWeekClose} style={{ margin:"15px"}}>Close</Button>
-						<Slider {...settings} style={{ color: "black" }}>
-							<div>
-								<img
-									src={W1}
-									alt="monImage"
-									style={{ width: "400px" ,maxHeight : "400px"}}
-								/>
-							</div>
-							<div>
-								<img
-									src={W2}
-									alt="monImage"
-									style={{ width: "400px" }}
-								/>
-							</div>
-						 
-						</Slider>
+							<Button
+								onClick={openWeekClose}
+								style={{ margin: "15px" }}
+							>
+								Close
+							</Button>
+							<Slider {...settings} style={{ color: "black" }}>
+								<div>
+									<img
+										src={W1}
+										alt="monImage"
+										style={{
+											width: "400px",
+											maxHeight: "400px",
+										}}
+									/>
+								</div>
+								<div>
+									<img
+										src={W2}
+										alt="monImage"
+										style={{ width: "400px" }}
+									/>
+								</div>
+							</Slider>
 						</>
 					)}
 				</VerticalTimelineElement>

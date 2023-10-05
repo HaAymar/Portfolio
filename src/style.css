@@ -448,6 +448,18 @@ button:focus {
 	}
 }
 
+.navbar-toggler-icon {
+	color: white;
+	border-radius: 4px;
+	height: 2px;
+	width: 20px;
+	transition: background-color 0.3s;
+}
+
+.navbar-toggler.collapsed .navbar-toggler-icon {
+	/* Change color of icon bars when collapsed */
+}
+
 .footer h3 {
 	font-size: 1em;
 	color: white !important;

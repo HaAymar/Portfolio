@@ -7,18 +7,18 @@ import logo from "../Assets/blue.png";
 import { Link } from "react-router-dom";
 
 function NavBar() {
-	const [expand, updateExpanded] = useState(false);
-	const [navColour, updateNavbar] = useState(false);
+  const [expand, updateExpanded] = useState(false);
+  const [navColour, updateNavbar] = useState(false);
 
-	function scrollHandler() {
-		if (window.scrollY >= 20) {
-			updateNavbar(true);
-		} else {
-			updateNavbar(false);
-		}
-	}
+  function scrollHandler() {
+    if (window.scrollY >= 20) {
+      updateNavbar(true);
+    } else {
+      updateNavbar(false);
+    }
+  }
 
-	window.addEventListener("scroll", scrollHandler);
+  window.addEventListener("scroll", scrollHandler);
 
 	return (
 		<Navbar
@@ -41,15 +41,14 @@ function NavBar() {
 						/>
 					</Nav.Link>
 				</Navbar.Brand>
-				<Navbar.Toggle
-					aria-controls="responsive-navbar-nav"
-					onClick={() => {
-						updateExpanded(expand ? false : "expanded");
-					}}
-				>
-					<span></span>
-					<span></span>
-					<span></span>
+			      <Navbar.Toggle
+          aria-controls="responsive-navbar-nav"
+          onClick={() => {
+            updateExpanded(!expand);
+          }}
+          className={expand ? "collapsed" : ""}
+        >
+					  <div className="navbar-toggler-icon"></div>
 				</Navbar.Toggle>
 				<Navbar.Collapse id="responsive-navbar-nav">
 					<Nav className="ms-auto" defaultActiveKey="#home">
