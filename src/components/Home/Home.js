@@ -57,16 +57,6 @@ function Home() {
 										</li>
 										<li className="social-icons">
 											<a
-												href="https://twitter.com/HakiAymar16444"
-												style={{ color: "white" }}
-												target="_blank"
-												rel="noopener noreferrer"
-											>
-												<AiOutlineTwitter />
-											</a>
-										</li>
-										<li className="social-icons">
-											<a
 												href="https://www.linkedin.com/in/aymar-davy/"
 												style={{ color: "white" }}
 												target="_blank"

@@ -9,7 +9,7 @@ import suicide from "../../Assets/Projects/TaalToolBox.svg";
 
 function Projects() {
 	return (
-		<Container fluid className="project-section">
+		<Container style={{ padding: "80px" }}>
 			<Container>
 				<h1 className="project-heading">
 					<strong className="purple">My Projects</strong>

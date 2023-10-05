@@ -3,7 +3,7 @@ html {
 		to bottom left,
 		/* rgb(89, 154, 238),
    rgb(176,224,230) */ rgba(78, 73, 73, 0.678),
-		rgba(72, 81, 107, 0.863)
+		rgba(39, 42, 54, 0.863)
 	);
 
 	--image-gradient: linear-gradient(
@@ -73,7 +73,7 @@ button:focus {
 .sticky {
 	background-color: #1b1a2ea9;
 	transition: all 0.3s ease-out 0s;
-	/* box-shadow: 0px 10px 10px 0px rgba(9, 5, 29, 0.171)  ; */
+
 	backdrop-filter: blur(15px);
 }
 
@@ -139,7 +139,6 @@ button:focus {
 	.navbar {
 		padding: 1rem 2rem;
 		font-size: 1.4rem;
-		/* background-color: #181a27  ; */
 	}
 	.navbar-nav .nav-item a::after {
 		display: none;
@@ -186,7 +185,7 @@ button:focus {
 	content: "";
 	position: relative;
 	display: block;
-	height: 5px;
+	max-height: 5px;
 	width: 0;
 	border-radius: 16px;
 	background: #4e83c8;
@@ -196,9 +195,10 @@ button:focus {
 	transition: all 0.3s ease-out 0s;
 }
 
-.navbar-nav .nav-item a:hover::after {
+/* .navbar-nav .nav-item a:hover::after {
 	width: 100%;
-}
+	color: red;
+} */
 
 /* --------- */
 /* Home section */
@@ -441,17 +441,14 @@ button:focus {
 	}
 }
 
-/* Add this CSS code to your stylesheet */
 .navbar-toggler-icon {
-	color: #333; /* Color of the hamburger icon */
-	border-radius: 4px; /* Rounded corners for the icon */
-	height: 2px; /* Height of the icon bars */
-	width: 20px; /* Width of the icon bars */
-	transition: color 0.3s; /* Transition effect for color change */
+	border-radius: 4px;
+	height: 2px;
+	width: 20px;
+	/* transition: color 0.3s; */
 }
 
 .navbar-toggler.collapsed .navbar-toggler-icon {
-	/* Change color of icon bars when collapsed */
 	color: white;
 }
 
