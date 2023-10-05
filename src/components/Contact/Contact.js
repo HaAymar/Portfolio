@@ -32,7 +32,11 @@ const Contact = () => {
 
 	return (
 		<Container style={{ padding: "80px" }}>
-			<Container>
+			<Container style={{
+					display: "flex",
+					flexDirection: "column",
+					alignItems: "center",
+				}}>
 				<h1 className="project-heading">
 					<strong className="purple">Contact Me </strong>
 				</h1>
@@ -105,8 +109,7 @@ export default Contact;
 
 const StyledContactForm = styled.div`
 	width: 400px;
-	margin-left: 360px;
-
+	 
 	form {
 		display: flex;
 		align-items: flex-start;

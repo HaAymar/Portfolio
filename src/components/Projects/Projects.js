@@ -3,14 +3,15 @@ import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import leaf from "../../Assets/Projects/carRental.svg";
 import emotion from "../../Assets/Projects/Translator.png";
+import Portfolio from "../../Assets/blue.png";
 // import editor from "../../Assets/Projects/codeEditor.png";
 
 import suicide from "../../Assets/Projects/TaalToolBox.svg";
 
 function Projects() {
 	return (
-		<Container fluid className="project-section">
-			<Container>
+		 
+			<Container style={{ padding: "80px" }}>
 				<h1 className="project-heading">
 					<strong className="purple">My Projects</strong>
 				</h1>
@@ -49,9 +50,18 @@ function Projects() {
 							ghLink="https://translator.vector-connect.com/"
 						/>
 					</Col>
+					<Col md={4} className="project-card">
+						<ProjectCard
+							imgPath={Portfolio}
+							isBlog={false}
+							title="Portfolio"
+							description="This is the portfolio version 1 that I have developed to show all the skills that I have"
+							ghLink="https://github.com/HaAymar/Portfolio"
+						/>
+					</Col>
 				</Row>
 			</Container>
-		</Container>
+		 
 	);
 }
 
