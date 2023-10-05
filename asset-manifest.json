@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.e118a2cc.css",
-    "main.js": "/Portfolio/static/js/main.19c63f93.js",
+    "main.css": "/Portfolio/static/css/main.f86e15c2.css",
+    "main.js": "/Portfolio/static/js/main.6122c2af.js",
     "static/media/p2.jpg": "/Portfolio/static/media/p2.e69f79ebe32208c40460.jpg",
     "static/media/p1.jpg": "/Portfolio/static/media/p1.d34845e1a781ad631b40.jpg",
     "static/media/p3.jpg": "/Portfolio/static/media/p3.6f7623fab74ff8f6ee4e.jpg",
@@ -13,6 +13,7 @@
     "static/media/photo.png": "/Portfolio/static/media/photo.257078ae081670bf559c.png",
     "static/media/p2.jpeg": "/Portfolio/static/media/p2.5eb0b0f7257fc53af036.jpeg",
     "static/media/CV-Aymar.pdf": "/Portfolio/static/media/CV-Aymar.df09b4bde5ab230392f5.pdf",
+    "static/media/phospho.png": "/Portfolio/static/media/phospho.06ab3b68d62b4ff3dabd.png",
     "static/media/certificat.pdf": "/Portfolio/static/media/certificat.787b42746eb4a10c3f93.pdf",
     "static/media/atelier.png": "/Portfolio/static/media/atelier.4256db6d422660888cae.png",
     "static/media/blue.png": "/Portfolio/static/media/blue.72f70f4964ae5ba8f9a3.png",
@@ -27,11 +28,11 @@
     "static/media/slick.ttf": "/Portfolio/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/Portfolio/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/Portfolio/index.html",
-    "main.e118a2cc.css.map": "/Portfolio/static/css/main.e118a2cc.css.map",
-    "main.19c63f93.js.map": "/Portfolio/static/js/main.19c63f93.js.map"
+    "main.f86e15c2.css.map": "/Portfolio/static/css/main.f86e15c2.css.map",
+    "main.6122c2af.js.map": "/Portfolio/static/js/main.6122c2af.js.map"
   },
   "entrypoints": [
-    "static/css/main.e118a2cc.css",
-    "static/js/main.19c63f93.js"
+    "static/css/main.f86e15c2.css",
+    "static/js/main.6122c2af.js"
   ]
 }
