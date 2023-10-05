@@ -3,7 +3,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 import logo from "../Assets/blue.png";
-
+import { GiHamburgerMenu } from "react-icons/gi";
 import { Link } from "react-router-dom";
 
 function NavBar() {
@@ -48,7 +48,10 @@ function NavBar() {
           }}
           className={expand ? "collapsed" : ""}
         >
-					  <div className="navbar-toggler-icon"></div>
+					  <div className="navbar-toggler-icon">
+						{GiHamburgerMenu}
+					  </div>
+					   
 				</Navbar.Toggle>
 				<Navbar.Collapse id="responsive-navbar-nav">
 					<Nav className="ms-auto" defaultActiveKey="#home">
