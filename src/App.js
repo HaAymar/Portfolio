@@ -36,7 +36,11 @@ function App() {
 			<div
 				className="App"
 				id={load ? "no-scroll" : "scroll"}
-				style={{ maxHeight: "100%" }}
+				style={{
+					minHeight: "100vh", // Hauteur minimale de la vue à 100% de la hauteur de l'écran
+					display: "flex",
+					flexDirection: "column",
+				}}
 			>
 				<Navbar />
 				<ScrollToTop />

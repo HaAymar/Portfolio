@@ -3,6 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import leaf from "../../Assets/Projects/carRental.svg";
 import emotion from "../../Assets/Projects/Translator.png";
+import Portfolio from "../../Assets/blue.png";
 // import editor from "../../Assets/Projects/codeEditor.png";
 
 import suicide from "../../Assets/Projects/TaalToolBox.svg";
@@ -47,6 +48,15 @@ function Projects() {
 							title="Vector Translator"
 							description="It is a web application allowing the translation of files present in a folder hierarchy into several languages, including French, English, Italian, German, Dutch and Portuguese."
 							ghLink="https://translator.vector-connect.com/"
+						/>
+					</Col>
+					<Col md={4} className="project-card">
+						<ProjectCard
+							imgPath={Portfolio}
+							isBlog={false}
+							title="Portfolio"
+							description="This is the portfolio version 1 that I have developed to show all the skills that I have"
+							ghLink="https://github.com/HaAymar/Portfolio"
 						/>
 					</Col>
 				</Row>

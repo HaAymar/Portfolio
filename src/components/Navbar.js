@@ -48,9 +48,7 @@ function NavBar() {
           }}
           className={expand ? "collapsed" : ""}
         >
-					  <div className="navbar-toggler-icon">
-						{GiHamburgerMenu}
-					  </div>
+					  <div className="navbar-toggler-icon"></div>
 					   
 				</Navbar.Toggle>
 				<Navbar.Collapse id="responsive-navbar-nav">
@@ -61,7 +59,7 @@ function NavBar() {
 								to="/"
 								onClick={() => updateExpanded(false)}
 							>
-								Home
+								<b>Home</b>
 							</Nav.Link>
 						</Nav.Item>
 						<Nav.Item>
@@ -70,7 +68,7 @@ function NavBar() {
 								to="/project"
 								onClick={() => updateExpanded(false)}
 							>
-								Projects
+								<b>Projects</b>
 							</Nav.Link>
 						</Nav.Item>
 
@@ -80,7 +78,7 @@ function NavBar() {
 								to="/skills"
 								onClick={() => updateExpanded(false)}
 							>
-								Skills
+								<b>Skills</b>
 							</Nav.Link>
 						</Nav.Item>
 						<Nav.Item>
@@ -89,7 +87,7 @@ function NavBar() {
 								to="/experience"
 								onClick={() => updateExpanded(false)}
 							>
-								Experience
+								<b>Experience</b>
 							</Nav.Link>
 						</Nav.Item>
 						<Nav.Item>
@@ -98,7 +96,7 @@ function NavBar() {
 								to="/contact"
 								onClick={() => updateExpanded(false)}
 							>
-								Contact
+								<b>Contact</b>
 							</Nav.Link>
 						</Nav.Item>
 					</Nav>

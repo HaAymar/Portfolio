@@ -18,11 +18,11 @@ html {
 .purple {
 	color: var(--imp-text-color);
 }
-
-button:focus {
-	box-shadow: none;
+.App {
+	min-height: 100vh; /* Définit la hauteur minimale de la vue à 100% de la hauteur de l'écran */
+	display: flex; /* Utilise un modèle d'affichage flexbox */
+	flex-direction: column; /* Aligne les éléments enfants de haut en bas */
 }
-
 /* --------- */
 /*  Preloader */
 /* --------- */
@@ -410,14 +410,18 @@ button:focus {
 /* --------- */
 .footer {
 	background-color: rgb(10, 4, 22);
-	bottom: 0;
 	padding-top: 10px;
 	padding-bottom: 8px;
+	width: 100%;
 	display: flex;
+	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	justify-items: center;
+	bottom: 0;
+	z-index: 2;
 }
+
 .footer-copywright {
 	text-align: center;
 }
@@ -441,17 +445,6 @@ button:focus {
 	}
 }
 
-.navbar-toggler-icon {
-	border-radius: 4px;
-	height: 2px;
-	width: 20px;
-	/* transition: color 0.3s; */
-}
-
-.navbar-toggler.collapsed .navbar-toggler-icon {
-	color: white;
-}
-
 .footer h3 {
 	font-size: 1em;
 	color: white;
@@ -467,6 +460,17 @@ button:focus {
 
 .blockquote-footer {
 	color: #a588c0;
+}
+
+.navbar-toggler-icon {
+	border-radius: 4px;
+	height: 2px;
+	width: 20px;
+	/* transition: color 0.3s; */
+}
+
+.navbar-toggler.collapsed .navbar-toggler-icon {
+	color: white;
 }
 /* --------- */
 /* Projects */
@@ -797,4 +801,43 @@ button:focus {
 	50% {
 		transform: translateY(-50%);
 	}
+}
+.navbar {
+  position: fixed !important;
+  transition: all 0.3s ease-out 0s !important;
+  padding: 0.3rem 2rem !important;
+  font-size: 1.2rem !important;
+}
+
+.navbar-toggler {
+  position: relative !important;
+  background-color: transparent !important;
+  border-color: transparent !important;
+}
+
+.navbar-toggler span {
+  display: block !important;
+  background-color: #be50f4 !important;
+  height: 4px !important;
+  width: 27px !important;
+  margin-top: 5px !important;
+  margin-bottom: 5px !important;
+  transform: rotate(0deg) !important;
+  left: 0 !important;
+  opacity: 1 !important;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active {
+  outline: 0 !important;
+}
+
+.navbar-toggler span:nth-child(1),
+.navbar-toggler span:nth-child(3) {
+  transition: transform 0.35s ease-in-out !important;
+  transition: transform 0.35s ease-in-out !important;
+}
+
+.navbar-toggler:not(.collapsed) span:nth-child(1) {
+  position: absolute !important;
 }
