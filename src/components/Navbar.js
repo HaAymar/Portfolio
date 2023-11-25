@@ -110,6 +110,8 @@ function NavBar() {
 									style={{
 										backgroundColor: "#4e83c8",
 										color: "white",
+										border: "none",
+										borderRadius: "4px",
 									}}
 								>
 									<option>FR</option>
