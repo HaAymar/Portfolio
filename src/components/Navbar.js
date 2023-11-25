@@ -103,7 +103,7 @@ function NavBar() {
 								style={{
 									display: "flex",
 									alignItems: "center",
-									paddingTop: "12px",
+									paddingTop: "15px",
 								}}
 							>
 								<select
