@@ -3,7 +3,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 import logo from "../Assets/blue.png";
-
+import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 
 function NavBar() {
@@ -41,15 +41,14 @@ function NavBar() {
 						/>
 					</Nav.Link>
 				</Navbar.Brand>
-				      <Navbar.Toggle
-          aria-controls="responsive-navbar-nav"
-          onClick={() => {
-            updateExpanded(!expand);
-          }}
-          className={expand ? "collapsed" : ""}
-        >
-					  <div className="navbar-toggler-icon" ></div>
-					   
+				<Navbar.Toggle
+					aria-controls="responsive-navbar-nav"
+					onClick={() => {
+						updateExpanded(!expand);
+					}}
+					className={expand ? "collapsed" : ""}
+				>
+					<div className="navbar-toggler-icon"></div>
 				</Navbar.Toggle>
 				<Navbar.Collapse id="responsive-navbar-nav">
 					<Nav className="ms-auto" defaultActiveKey="#home">
@@ -98,6 +97,25 @@ function NavBar() {
 							>
 								Contact
 							</Nav.Link>
+						</Nav.Item>
+						<Nav.Item>
+							<div
+								style={{
+									display: "flex",
+									alignItems: "center",
+									paddingTop: "12px",
+								}}
+							>
+								<select
+									style={{
+										backgroundColor: "#4e83c8",
+										color: "white",
+									}}
+								>
+									<option>FR</option>
+									<option>EN</option>
+								</select>
+							</div>
 						</Nav.Item>
 					</Nav>
 				</Navbar.Collapse>
