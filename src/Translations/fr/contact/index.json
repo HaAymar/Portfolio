@@ -1,10 +1,10 @@
 {
-	"contact": "Contact Me",
-	"descrition": "Send me an email for any question",
+	"contact": "Contactez-moi",
+	"description": "Envoyez-moi un email pour toute question",
 
-	"name": "Name",
-	"email": "Email",
+	"name": "Nom",
+	"email": "E-mail",
 	"message": "Message",
 
-	"send": "Send"
+	"send": "Envoyer"
 }

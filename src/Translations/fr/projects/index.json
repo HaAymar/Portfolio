@@ -1,12 +1,12 @@
 {
-	"projects": "My Projects",
-	"description": "These are the projects I got involved in",
+	"projects": "Mes Projets",
+	"description": "Ce sont les projets dans lesquels je me suis impliqué",
 
-	"car-rental": "In my second year of my Bac (Bachelor's) program, I embarked on a project with the primary objective of creating a web-based application tailored for a client specializing in car rental services.",
-	"taalToolBox": "TaalToolBox is a platform that facilitates language learning, namely Dutch and English, which are the main languages, this platform was designed in the integration project for my last academic year",
-	"translator": "It is a web application allowing the translation of files present in a folder hierarchy into several languages, including French, English, Italian, German, Dutch and Portuguese.",
+	"car-rental": "Au cours de ma deuxième année de Bac (Baccalauréat), je me suis lancé dans un projet ayant pour objectif principal de créer une application web sur mesure pour un client spécialisé dans les services de location de voitures.",
+	"taalToolBox": "TaalToolBox est une plateforme facilitant l'apprentissage des langues, notamment le néerlandais et l'anglais, qui sont les principales langues. Cette plateforme a été conçue dans le cadre du projet d'intégration de ma dernière année académique",
+	"translator": "Il s'agit d'une application web permettant la traduction de fichiers présents dans une hiérarchie de dossiers en plusieurs langues, dont le français, l'anglais, l'italien, l'allemand, le néerlandais et le portugais.",
 
-	"link": "Link",
+	"link": "Lien",
 
-	"portfolio": "This is the portfolio version 1 that I have developed to show all the skills that I have"
+	"portfolio": "Ceci est la version 1 de mon portfolio que j'ai développé pour montrer toutes les compétences que j'ai acquises"
 }

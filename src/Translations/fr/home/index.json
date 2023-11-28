@@ -1,13 +1,13 @@
 {
-	"hello": "Hello",
-	"am": "I'm",
-	"background": " a Full Stack developer passionate about web and application development",
-	"contact": "Contact Me",
+	"hello": "Bonjour",
+	"am": "Je suis",
+	"background": " un développeur Full Stack passionné par le développement web et d'applications",
+	"contact": "Contactez-moi",
 
-	"who": "WHO AM I",
-	"presentation": "I am a passionate student with a keen interest in coding, particularly in the field of web development. My love for technology and the web has driven me to constantly explore and expand my knowledge in this domain. As a student, I am committed to honing my skills and staying up-to-date with the latest trends and advancements in web development.",
-	"cv": "Download My CV",
+	"who": "QUI SUIS-JE",
+	"presentation": "Je suis un étudiant passionné avec un vif intérêt pour la programmation, en particulier dans le domaine du développement web. Mon amour pour la technologie et le web m'a poussé à explorer et à étendre constamment mes connaissances dans ce domaine. En tant qu'étudiant, je m'engage à perfectionner mes compétences et à rester à jour avec les dernières tendances et avancées en matière de développement web.",
+	"cv": "Téléchargez mon CV",
 
-	"footer-made": "Made with",
-	"footer": "by Aymar Davy Hakizimana"
+	"footer-made": "Réalisé avec",
+	"footer": "par Aymar Davy Hakizimana"
 }
