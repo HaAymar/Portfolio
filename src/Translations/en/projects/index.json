@@ -1,0 +1,12 @@
+{
+	"projects": "My Projects",
+	"description": "These are the projects I got involved in",
+
+	"car-rental": "In my second year of my Bac (Bachelor's) program, I embarked on a project with the primary objective of creating a web-based application tailored for a client specializing in car rental services.",
+	"taalToolBox": "TaalToolBox is a platform that facilitates language learning, namely Dutch and English, which are the main languages, this platform was designed in the integration project for my last academic year",
+	"translator": "It is a web application allowing the translation of files present in a folder hierarchy into several languages, including French, English, Italian, German, Dutch and Portuguese.",
+
+	"link": "Link",
+
+	"portfolio": "This is the portfolio version 1 that I have developed to show all the skills that I have"
+}

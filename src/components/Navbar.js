@@ -3,8 +3,8 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 import logo from "../Assets/blue.png";
-import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 function NavBar() {
 	const [expand, updateExpanded] = useState(false);
