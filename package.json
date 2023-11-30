@@ -5,6 +5,8 @@
   "homepage": "https://haaymar.github.io/Portfolio",
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
+    "@fortawesome/free-solid-svg-icons": "^6.5.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "@ramonak/react-progress-bar": "^5.0.3",
     "@react-pdf/renderer": "^2.2.0",
     "@testing-library/jest-dom": "^5.16.2",

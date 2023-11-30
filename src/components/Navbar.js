@@ -5,15 +5,17 @@ import Container from "react-bootstrap/Container";
 import logo from "../Assets/blue.png";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import i18n from "../translations/index.ts";
 
 function NavBar() {
-	const { i18n } = useTranslation();
+	// const { i18n } = useTranslation();
+	const [selectedLanguage, setSelectedLanguage] = useState(i18n.language);
 	const { t } = useTranslation("navBar");
 	const [expand, updateExpanded] = useState(false);
 	const [navColour, updateNavbar] = useState(false);
-	const changeLanguage = (lng) => {
-		i18n.changeLanguage(lng);
-	};
+	// const changeLanguage = (lng) => {
+	// 	i18n.changeLanguage(lng);
+	// };
 	function scrollHandler() {
 		if (window.scrollY >= 20) {
 			updateNavbar(true);
@@ -24,6 +26,11 @@ function NavBar() {
 
 	window.addEventListener("scroll", scrollHandler);
 
+	const chooseLanguage = (e) => {
+		e.preventDefault();
+		i18n.changeLanguage(e.target.value); // i18n.changeLanguage() is used to change the language assigned to lng in i18n.js file.
+		setSelectedLanguage(e.target.value);
+	};
 	return (
 		<Navbar
 			expanded={expand}
@@ -117,17 +124,11 @@ function NavBar() {
 										border: "none",
 										borderRadius: "4px",
 									}}
+									defaultValue={selectedLanguage}
+									onChange={chooseLanguage}
 								>
-									<option
-										onClick={() => changeLanguage("fr")}
-									>
-										FR
-									</option>
-									<option
-										onClick={() => changeLanguage("en")}
-									>
-										EN
-									</option>
+									<option value="fr">FR</option>
+									<option value="en">EN</option>
 								</select>
 							</div>
 						</Nav.Item>
