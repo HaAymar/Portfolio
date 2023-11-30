@@ -6,5 +6,7 @@
 	"email": "E-mail",
 	"message": "Message",
 
-	"send": "Envoyer"
+	"send": "Envoyer",
+
+	"answer": "E-mail envoyé avec succès!"
 }

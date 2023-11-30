@@ -1,0 +1,12 @@
+{
+	"contact": "Contact Me",
+	"description": "Send me an Email for any question!",
+
+	"name": "Name",
+	"email": "Email",
+	"message": "Message",
+
+	"send": "Send",
+
+	"answer": "Email sent successfully!"
+}

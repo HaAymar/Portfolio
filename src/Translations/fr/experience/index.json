@@ -1,5 +1,6 @@
 {
 	"experience": "Expériences",
+	"description": "Les événements et formations auxquels j'ai eu l'occasion de participer",
 	"a2u": "C'est un programme organisé par l'UCL pour les demandeurs d'asile souhaitant étudier à l'université.",
 	"phosforea": "Il s'agit d'une formation visant à faciliter la découverte des enjeux de la cybersécurité",
 	"devDay": "DevDay est un événement dédié aux activités liées au développement logiciel ou à la programmation",
@@ -8,5 +9,6 @@
 	"ctf": "C'est un exercice dans lequel les participants tentent de trouver des chaînes de texte, appelées 'drapeaux', qui sont secrètement cachées dans des programmes ou des sites web volontairement vulnérables",
 	"job": "Atelier d'emballage situé à Namur, j'ai travaillé comme magasinier et j'ai également fait de l'emballage",
 	"certificate": "Certificat",
-	"photos": "Photos"
+	"photos": "Photos",
+	"close": "Fermer"
 }

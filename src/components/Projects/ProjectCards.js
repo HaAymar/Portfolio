@@ -3,8 +3,9 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import { CgWebsite } from "react-icons/cg";
 import { BiLink } from "react-icons/bi";
-
+import { useTranslation } from "react-i18next";
 function ProjectCards(props) {
+	const { t } = useTranslation("projects");
 	return (
 		<Card className="project-card-view">
 			<Card.Img
@@ -24,7 +25,7 @@ function ProjectCards(props) {
 				</Card.Text>
 				<Button variant="primary" href={props.ghLink} target="_blank">
 					<BiLink /> &nbsp;
-					{props.isBlog ? "Blog" : "Link"}
+					{props.isBlog ? "Blog" : t("link")}
 				</Button>
 				{"\n"}
 				{"\n"}

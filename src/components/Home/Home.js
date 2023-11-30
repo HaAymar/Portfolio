@@ -9,8 +9,10 @@ import {
 	AiFillInstagram,
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
 function Home() {
+	const { t } = useTranslation("home");
 	return (
 		<section>
 			<Container>
@@ -23,7 +25,7 @@ function Home() {
 								style={{ paddingBottom: 15 }}
 								className="heading-name"
 							>
-								Hello!{" "}
+								{t("hello")}{" "}
 								<span
 									className="wave"
 									role="img"
@@ -34,13 +36,12 @@ function Home() {
 							</h1>
 
 							<h2 className="heading-name-des">
-								I'm
+								{t("am")}
 								<strong className="main-name">
 									{" "}
 									Aymar Davy HAKIZIMANA{" "}
 								</strong>
-								a Full Stack developer passionate about web and
-								application development
+								{t("background")}
 							</h2>
 							<Row>
 								<Col md="4" className="footer-body">
@@ -99,7 +100,7 @@ function Home() {
 											height: "50px",
 										}}
 									>
-										Contact Me
+										{t("contact")}
 									</Button>
 								</Link>
 							</div>

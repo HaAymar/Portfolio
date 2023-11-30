@@ -45,12 +45,12 @@ import W1 from "../../Assets/OpenWeek/p1.jpg";
 import W2 from "../../Assets/OpenWeek/p2.jpg";
 // ------------- CTF -------------- //
 import Ctf from "../../Assets/certificat.pdf";
-
+import { useTranslation } from "react-i18next";
 function Experience() {
-
- const [devDayActive, setdevDayActive] = useState(false);
- const [odooActive, setodooActive] = useState(false);
- const [openWeekActive, setopenWeekActive] = useState(false);
+	const { t } = useTranslation("experience");
+	const [devDayActive, setdevDayActive] = useState(false);
+	const [odooActive, setodooActive] = useState(false);
+	const [openWeekActive, setopenWeekActive] = useState(false);
 
 	const settings = {
 		dots: true,
@@ -61,15 +61,15 @@ function Experience() {
 		autoplay: true,
 		autoplaySpeed: 3000,
 	};
-//----------- DevDay Action --------- //
- 	const devDayCarousel = () => {
+	//----------- DevDay Action --------- //
+	const devDayCarousel = () => {
 		setdevDayActive(true);
 	};
 
 	const devDayClose = () => {
 		setdevDayActive(false);
 	};
-//------------ Odoo Action ---------//
+	//------------ Odoo Action ---------//
 	const odooCarousel = () => {
 		setodooActive(true);
 	};
@@ -77,7 +77,7 @@ function Experience() {
 	const odooClose = () => {
 		setodooActive(false);
 	};
-//------------- Open Week ---------//
+	//------------- Open Week ---------//
 	const openWeekCarousel = () => {
 		setopenWeekActive(true);
 	};
@@ -89,9 +89,10 @@ function Experience() {
 	return (
 		<Container style={{ padding: "80px" }}>
 			<h1 className="project-heading">
-				<strong className="purple">Experiences</strong>
+				<strong className="purple">{t("experience")}</strong>
 			</h1>
 			<p style={{ color: "white" }}>
+				{t("description")}
 				The events and training that I had the opportunity to
 				participate in
 			</p>
@@ -114,14 +115,11 @@ function Experience() {
 						<h4 className="vertical-timeline-element-subtitle">
 							UCL
 						</h4>
-						<p>
-							This is a program organized by UCL for asylum
-							seekers wishing to study university.
-						</p>
+						<p>{t("a2u")}</p>
 					</div>
 					<br />
 					<Button href={A2u} target="_blank" rel="noreferrer">
-						Certificate
+						{t("certificate")}
 					</Button>
 				</VerticalTimelineElement>
 				<VerticalTimelineElement
@@ -146,14 +144,11 @@ function Experience() {
 						<h4 className="vertical-timeline-element-subtitle">
 							Phosforea
 						</h4>
-						<p>
-							It is a training course which aims to Facilitate the
-							discovery of cybersecurity issues
-						</p>
+						<p>{t("phosforea")}</p>
 					</div>
 					<br />
 					<Button href={Phos} target="_blank" rel="noreferrer">
-						Certificate
+						{t("certificate")}
 					</Button>
 				</VerticalTimelineElement>
 				<VerticalTimelineElement
@@ -178,44 +173,47 @@ function Experience() {
 						<h4 className="vertical-timeline-element-subtitle">
 							Louvain-La-Neuve
 						</h4>
-						<p>
-							DevDay is an event that is dedicated to activities
-							related to software development or programming
-						</p>
+						<p>{t("devDay")}</p>
 					</div>
 					<br />
-					{/* <Button>Photos</Button> */}
 					{!devDayActive ? (
-						<Button onClick={devDayCarousel}>Photos</Button>
+						<Button onClick={devDayCarousel}>{t("photos")}</Button>
 					) : (
 						<>
-						<Button onClick={devDayClose} style={{ margin:"15px"}}>Close</Button>
-						<Slider {...settings} style={{ color: "black" }}>
-							<div>
-								<img
-									src={P1}
-									alt="monImage"
-									style={{ width: "400px" ,maxHeight : "400px"}}
-								/>
-							</div>
-							<div>
-								<img
-									src={P2}
-									alt="monImage"
-									style={{ width: "400px" }}
-								/>
-							</div>
-							<div>
-								<img
-									src={P3}
-									alt="monImage"
-									style={{ width: "400px" }}
-								/>
-							</div>
-						</Slider>
+							<Button
+								onClick={devDayClose}
+								style={{ margin: "15px" }}
+							>
+								{t("close")}
+							</Button>
+							<Slider {...settings} style={{ color: "black" }}>
+								<div>
+									<img
+										src={P1}
+										alt="monImage"
+										style={{
+											width: "400px",
+											maxHeight: "400px",
+										}}
+									/>
+								</div>
+								<div>
+									<img
+										src={P2}
+										alt="monImage"
+										style={{ width: "400px" }}
+									/>
+								</div>
+								<div>
+									<img
+										src={P3}
+										alt="monImage"
+										style={{ width: "400px" }}
+									/>
+								</div>
+							</Slider>
 						</>
 					)}
-					 
 				</VerticalTimelineElement>
 				<VerticalTimelineElement
 					style={{ color: "white" }}
@@ -236,40 +234,45 @@ function Experience() {
 						<h4 className="vertical-timeline-element-subtitle">
 							Odoo
 						</h4>
-						<p>
-							I participated in an Odoo Hackathon for 48 hours on
-							the theme "Education of tomorrow"
-						</p>
+						<p>{t("odoo")}</p>
 					</div>
 					<br />
 					{!odooActive ? (
 						<Button onClick={odooCarousel}>Photos</Button>
 					) : (
 						<>
-						<Button onClick={odooClose} style={{ margin:"15px"}}>Close</Button>
-						<Slider {...settings} style={{ color: "black" }}>
-							<div>
-								<img
-									src={O1}
-									alt="monImage"
-									style={{ width: "400px" }}
-								/>
-							</div>
-							<div>
-								<img
-									src={O2}
-									alt="monImage"
-									style={{ width: "400px" }}
-								/>
-							</div>
-							<div>
-								<img
-									src={O3}
-									alt="monImage"
-									style={{ width: "350px", maxHeight : "400px"}}
-								/>
-							</div>
-						</Slider>
+							<Button
+								onClick={odooClose}
+								style={{ margin: "15px" }}
+							>
+								{t("close")}
+							</Button>
+							<Slider {...settings} style={{ color: "black" }}>
+								<div>
+									<img
+										src={O1}
+										alt="monImage"
+										style={{ width: "400px" }}
+									/>
+								</div>
+								<div>
+									<img
+										src={O2}
+										alt="monImage"
+										style={{ width: "400px" }}
+									/>
+								</div>
+								<div>
+									<img
+										src={O3}
+										alt="monImage"
+										style={{
+											width: "350px",
+											maxHeight: "400px",
+										}}
+									/>
+								</div>
+							</Slider>
 						</>
 					)}
 				</VerticalTimelineElement>
@@ -291,34 +294,40 @@ function Experience() {
 						<h4 className="vertical-timeline-element-subtitle">
 							UCL
 						</h4>
-						<p>
-							The week focused on collaboration and Open Source
-							development at UCL
-						</p>
+						<p>{t("openWeek")}</p>
 					</div>
 					<br />
 					{!openWeekActive ? (
-						<Button onClick={openWeekCarousel}>Photos</Button>
+						<Button onClick={openWeekCarousel}>
+							{t("photos")}
+						</Button>
 					) : (
 						<>
-						<Button onClick={openWeekClose} style={{ margin:"15px"}}>Close</Button>
-						<Slider {...settings} style={{ color: "black" }}>
-							<div>
-								<img
-									src={W1}
-									alt="monImage"
-									style={{ width: "400px" ,maxHeight : "400px"}}
-								/>
-							</div>
-							<div>
-								<img
-									src={W2}
-									alt="monImage"
-									style={{ width: "400px" }}
-								/>
-							</div>
-						 
-						</Slider>
+							<Button
+								onClick={openWeekClose}
+								style={{ margin: "15px" }}
+							>
+								{t("close")}
+							</Button>
+							<Slider {...settings} style={{ color: "black" }}>
+								<div>
+									<img
+										src={W1}
+										alt="monImage"
+										style={{
+											width: "400px",
+											maxHeight: "400px",
+										}}
+									/>
+								</div>
+								<div>
+									<img
+										src={W2}
+										alt="monImage"
+										style={{ width: "400px" }}
+									/>
+								</div>
+							</Slider>
 						</>
 					)}
 				</VerticalTimelineElement>
@@ -344,16 +353,11 @@ function Experience() {
 						<h4 className="vertical-timeline-element-subtitle">
 							EPHEC
 						</h4>
-						<p>
-							It's an exercise in which participants attempt to
-							find strings of text, called "flags", that are
-							secretly hidden in deliberately vulnerable programs
-							or websites
-						</p>
+						<p>{t("ctf")}</p>
 					</div>
 					<br />
 					<Button href={Ctf} target="_blank" rel="noreferrer">
-						Certificate
+						{t("certificate")}
 					</Button>
 				</VerticalTimelineElement>
 				<VerticalTimelineElement
@@ -378,13 +382,10 @@ function Experience() {
 						<h4 className="vertical-timeline-element-subtitle">
 							L'Atelier
 						</h4>
-						<p>
-							Packaging workshop located in Namur, I worked as a
-							storekeeper and I also did the packaging
-						</p>
+						<p>{t("job")}</p>
 					</div>
 					<br />
-					<Button>Certificate</Button>
+					<Button>{t("certificate")}</Button>
 				</VerticalTimelineElement>
 				<VerticalTimelineElement
 					iconStyle={{

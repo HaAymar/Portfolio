@@ -1,6 +1,8 @@
 {
 	"experience": "Experiences",
 
+	"description": "The events and training that I had the opportunity to participate in",
+
 	"a2u": "This is a program organized by UCL for asylum seekers wishing to study university.",
 
 	"phosforea": "It is a training course which aims to Facilitate the discovery of cybersecurity issues",
@@ -17,5 +19,7 @@
 
 	"certificate": "Certificate",
 
-	"photos": "Photos"
+	"photos": "Photos",
+
+	"close": "Close"
 }

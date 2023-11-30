@@ -7,9 +7,13 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 function NavBar() {
+	const { i18n } = useTranslation();
+	const { t } = useTranslation("navBar");
 	const [expand, updateExpanded] = useState(false);
 	const [navColour, updateNavbar] = useState(false);
-
+	const changeLanguage = (lng) => {
+		i18n.changeLanguage(lng);
+	};
 	function scrollHandler() {
 		if (window.scrollY >= 20) {
 			updateNavbar(true);
@@ -58,7 +62,7 @@ function NavBar() {
 								to="/"
 								onClick={() => updateExpanded(false)}
 							>
-								Home
+								{t("home")}
 							</Nav.Link>
 						</Nav.Item>
 						<Nav.Item>
@@ -67,7 +71,7 @@ function NavBar() {
 								to="/project"
 								onClick={() => updateExpanded(false)}
 							>
-								Projects
+								{t("project")}
 							</Nav.Link>
 						</Nav.Item>
 
@@ -77,7 +81,7 @@ function NavBar() {
 								to="/skills"
 								onClick={() => updateExpanded(false)}
 							>
-								Skills
+								{t("skills")}
 							</Nav.Link>
 						</Nav.Item>
 						<Nav.Item>
@@ -86,7 +90,7 @@ function NavBar() {
 								to="/experience"
 								onClick={() => updateExpanded(false)}
 							>
-								Experience
+								{t("experience")}
 							</Nav.Link>
 						</Nav.Item>
 						<Nav.Item>
@@ -95,7 +99,7 @@ function NavBar() {
 								to="/contact"
 								onClick={() => updateExpanded(false)}
 							>
-								Contact
+								{t("contact")}
 							</Nav.Link>
 						</Nav.Item>
 						<Nav.Item>
@@ -114,8 +118,16 @@ function NavBar() {
 										borderRadius: "4px",
 									}}
 								>
-									<option>FR</option>
-									<option>EN</option>
+									<option
+										onClick={() => changeLanguage("fr")}
+									>
+										FR
+									</option>
+									<option
+										onClick={() => changeLanguage("en")}
+									>
+										EN
+									</option>
 								</select>
 							</div>
 						</Nav.Item>

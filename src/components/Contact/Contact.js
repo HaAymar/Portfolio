@@ -5,8 +5,10 @@ import { Container } from "react-bootstrap";
 import { MdOutlineAlternateEmail } from "react-icons/md";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { BiCurrentLocation } from "react-icons/bi";
+import { useTranslation } from "react-i18next";
 
 const Contact = () => {
+	const { t } = useTranslation("contact");
 	const form = useRef();
 	const [isEmailSent, setIsEmailSent] = useState(false);
 	const sendEmail = (e) => {
@@ -32,31 +34,37 @@ const Contact = () => {
 
 	return (
 		<Container style={{ padding: "80px" }}>
-			<Container style={{
+			<Container
+				style={{
 					display: "flex",
 					flexDirection: "column",
 					alignItems: "center",
-				}}>
+				}}
+			>
 				<h1 className="project-heading">
-					<strong className="purple">Contact Me </strong>
+					<strong className="purple">{t("contact")} </strong>
 				</h1>
-				<p style={{ color: "white" }}>
-					Send me an email for any question
-				</p>
+				<p style={{ color: "white" }}>{t("description")}</p>
 				<StyledContactForm>
 					{isEmailSent ? (
-						<div style={{ color: "green" }}>
-							Email sent successfully!
-						</div>
+						<div style={{ color: "green" }}>{t("answer")}</div>
 					) : (
 						<form ref={form} onSubmit={sendEmail}>
-							<label style={{ color: "white" }}>Name</label>
+							<label style={{ color: "white" }}>
+								{t("name")}
+							</label>
 							<input type="text" name="user_name" />
-							<label style={{ color: "white" }}>Email</label>
+							<label style={{ color: "white" }}>
+								{" "}
+								{t("email")}
+							</label>
 							<input type="email" name="user_email" />
-							<label style={{ color: "white" }}>Message</label>
+							<label style={{ color: "white" }}>
+								{" "}
+								{t("message")}
+							</label>
 							<textarea name="message" />
-							<input type="submit" value="Send" />
+							<input type="submit" value={t("send")} />
 						</form>
 					)}
 					<ul
@@ -109,7 +117,7 @@ export default Contact;
 
 const StyledContactForm = styled.div`
 	width: 400px;
-	 
+
 	form {
 		display: flex;
 		align-items: flex-start;
