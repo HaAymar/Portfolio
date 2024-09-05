@@ -471,11 +471,12 @@ button:focus {
 }
 
 .project-card {
-	padding-top: 50px !important;
-	padding-bottom: 50px !important;
-	padding-left: 25px !important;
-	padding-right: 25px !important;
-	height: auto !important;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	padding-left: 25px;
+	padding-right: 25px;
+	/* align-items: center; */
+	height: auto;
 }
 
 .project-card-view {
@@ -664,13 +665,6 @@ button:focus {
 	padding-bottom: 30px;
 }
 
- 
-
- 
- 
-
- 
- 
 .like-item {
 	padding-top: 10px !important;
 	font-size: 1.1em !important;
@@ -721,7 +715,6 @@ button:focus {
 
 .fork-btn-inner:hover {
 	transform: translateY(-2px) !important;
- 
 }
 .fork-btn-inner::after {
 	display: none !important;

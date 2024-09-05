@@ -10,9 +10,9 @@ import {
 } from "react-icons/di";
 import { FaVuejs } from "react-icons/fa";
 import { SiTypescript, SiPostgresql, SiNestjs, SiMysql } from "react-icons/si";
-import ProgressBar from "@ramonak/react-progress-bar";
+// import ProgressBar from "@ramonak/react-progress-bar";
 
-function Techstack() {
+function Skills() {
 	const [hoveredIcon, setHoveredIcon] = useState("");
 
 	const handleIconMouseEnter = (iconName) => {
@@ -47,15 +47,7 @@ function Techstack() {
 					onMouseEnter={() => handleIconMouseEnter(tech.name)}
 					onMouseLeave={handleIconMouseLeave}
 				>
-					<div className="icon-wrapper">
-						{tech.icon}
-						<ProgressBar
-							completed={75} // You can customize this as needed
-							bgColor="#5D76DF"
-							animateOnRender={true}
-							isLabelVisible={false}
-						/>
-					</div>
+					<div className="icon-wrapper">{tech.icon}</div>
 					{hoveredIcon === tech.name && (
 						<div className="icon-name" style={{ fontSize: "15px" }}>
 							{tech.name}
@@ -67,4 +59,4 @@ function Techstack() {
 	);
 }
 
-export default Techstack;
+export default Skills;

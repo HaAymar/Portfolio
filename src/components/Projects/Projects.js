@@ -6,7 +6,7 @@ import emotion from "../../Assets/Projects/Translator.png";
 import Portfolio from "../../Assets/blue.png";
 import { useTranslation } from "react-i18next";
 import suicide from "../../Assets/Projects/TaalToolBox.svg";
-
+import hitech from "../../Assets/Projects/hitech.svg";
 function Projects() {
 	const { t } = useTranslation("projects");
 	return (
@@ -52,6 +52,15 @@ function Projects() {
 						title="Portfolio"
 						description={t("portfolio")}
 						ghLink="https://github.com/HaAymar/Portfolio"
+					/>
+				</Col>
+				<Col md={4} className="project-card">
+					<ProjectCard
+						imgPath={hitech}
+						isBlog={false}
+						title="Hitech-Solutions"
+						description={t("hitech")}
+						ghLink="https://github.com/HaAymar/TFE-HiTech"
 					/>
 				</Col>
 			</Row>

@@ -9,7 +9,6 @@ import {
 	SiAdobexd,
 	SiJenkins,
 } from "react-icons/si";
-import ProgressBar from "@ramonak/react-progress-bar";
 
 function Toolstack() {
 	const [hoveredIcon, setHoveredIcon] = useState("");
@@ -43,15 +42,7 @@ function Toolstack() {
 					onMouseEnter={() => handleIconMouseEnter(tech.name)}
 					onMouseLeave={handleIconMouseLeave}
 				>
-					<div className="icon-wrapper">
-						{tech.icon}
-						<ProgressBar
-							completed={75} // You can customize this as needed
-							bgColor="#5D76DF"
-							animateOnRender={true}
-							isLabelVisible={false}
-						/>
-					</div>
+					<div className="icon-wrapper">{tech.icon}</div>
 					{hoveredIcon === tech.name && (
 						<div className="icon-name" style={{ fontSize: "15px" }}>
 							{tech.name}
