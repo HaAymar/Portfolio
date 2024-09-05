@@ -9,7 +9,7 @@ import Footer from "./components/Footer";
 import Experience from "./components/Experience/Experience";
 import Contact from "./components/Contact/Contact";
 import {
-	BrowserRouter as Router,
+	HashRouter as Router,
 	Route,
 	Routes,
 	Navigate,
