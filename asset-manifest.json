@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.c2b8f467.css",
-    "main.js": "/Portfolio/static/js/main.9fbf5102.js",
+    "main.css": "/Portfolio/static/css/main.285eaf49.css",
+    "main.js": "/Portfolio/static/js/main.b7a28027.js",
     "static/media/p2.jpg": "/Portfolio/static/media/p2.e69f79ebe32208c40460.jpg",
     "static/media/p1.jpg": "/Portfolio/static/media/p1.d34845e1a781ad631b40.jpg",
     "static/media/p3.jpg": "/Portfolio/static/media/p3.6f7623fab74ff8f6ee4e.jpg",
@@ -15,6 +15,7 @@
     "static/media/CV-Aymar.pdf": "/Portfolio/static/media/CV-Aymar.df09b4bde5ab230392f5.pdf",
     "static/media/certificat.pdf": "/Portfolio/static/media/certificat.787b42746eb4a10c3f93.pdf",
     "static/media/atelier.png": "/Portfolio/static/media/atelier.4256db6d422660888cae.png",
+    "static/media/hitech.svg": "/Portfolio/static/media/hitech.e153d8a72db7917d538fe866f57ce9d4.svg",
     "static/media/carRental.svg": "/Portfolio/static/media/carRental.e02b207d2b9f51dcb0b0b7df855e82e7.svg",
     "static/media/phosforea.pdf": "/Portfolio/static/media/phosforea.25517387450621ff5073.pdf",
     "static/media/devda.png": "/Portfolio/static/media/devda.b7235dd0d77b829dce66.png",
@@ -27,11 +28,11 @@
     "static/media/slick.ttf": "/Portfolio/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/Portfolio/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/Portfolio/index.html",
-    "main.c2b8f467.css.map": "/Portfolio/static/css/main.c2b8f467.css.map",
-    "main.9fbf5102.js.map": "/Portfolio/static/js/main.9fbf5102.js.map"
+    "main.285eaf49.css.map": "/Portfolio/static/css/main.285eaf49.css.map",
+    "main.b7a28027.js.map": "/Portfolio/static/js/main.b7a28027.js.map"
   },
   "entrypoints": [
-    "static/css/main.c2b8f467.css",
-    "static/js/main.9fbf5102.js"
+    "static/css/main.285eaf49.css",
+    "static/js/main.b7a28027.js"
   ]
 }
