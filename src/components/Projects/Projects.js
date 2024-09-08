@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import leaf from "../../Assets/Projects/carRental.svg";
-import emotion from "../../Assets/Projects/Translator.png";
+import vector from "../../Assets/Projects/Translator.png";
 import Portfolio from "../../Assets/blue.png";
 import { useTranslation } from "react-i18next";
 import suicide from "../../Assets/Projects/TaalToolBox.svg";
@@ -38,20 +38,11 @@ function Projects() {
 
 				<Col md={4} className="project-card">
 					<ProjectCard
-						imgPath={emotion}
+						imgPath={vector}
 						isBlog={false}
 						title="Vector Translator"
 						description={t("translator")}
 						ghLink="https://translator.vector-connect.com/"
-					/>
-				</Col>
-				<Col md={4} className="project-card">
-					<ProjectCard
-						imgPath={Portfolio}
-						isBlog={false}
-						title="Portfolio"
-						description={t("portfolio")}
-						ghLink="https://github.com/HaAymar/Portfolio"
 					/>
 				</Col>
 				<Col md={4} className="project-card">
@@ -61,6 +52,15 @@ function Projects() {
 						title="Hitech-Solutions"
 						description={t("hitech")}
 						ghLink="https://github.com/HaAymar/TFE-HiTech"
+					/>
+				</Col>
+				<Col md={4} className="project-card">
+					<ProjectCard
+						imgPath={Portfolio}
+						isBlog={false}
+						title="Portfolio"
+						description={t("portfolio")}
+						ghLink="https://github.com/HaAymar/Portfolio"
 					/>
 				</Col>
 			</Row>

@@ -19,8 +19,10 @@ function ProjectCards(props) {
 				}}
 			/>
 			<Card.Body>
-				<Card.Title>{props.title}</Card.Title>
-				<Card.Text style={{ textAlign: "justify" }}>
+				<Card.Title style={{ color: "#5F9EA0", fontWeight: "bold" }}>
+					{props.title}
+				</Card.Title>
+				<Card.Text style={{ textAlign: "center" }}>
 					{props.description}
 				</Card.Text>
 				<Button variant="primary" href={props.ghLink} target="_blank">
